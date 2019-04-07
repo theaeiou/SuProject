@@ -1,0 +1,252 @@
+#his{
+  margin-top: 210px;
+  font-family:'Kanit', sans-serif;
+  font-size: 90%;
+}
+#nab{
+  font-family:'Kanit', sans-serif;
+  font-size: 15px;
+}
+#hh2{
+  font-family: 'Kanit', sans-serif;
+  position: absolute;
+  margin-left: 170px;
+  top: 40px;
+  font-size: 100%;
+}
+#hh{
+  font-family: 'Kanit', sans-serif;
+  position: absolute;
+  margin-left: 190px;
+  top: 60px;
+  font-size: 120%;
+}
+#edit{
+  font-family:'Kanit', sans-serif;
+  position: absolute;
+
+  color:#d78c28
+}
+#logout{
+  font-family:'Kanit', sans-serif;
+  /* position: absolute;
+  margin-left: 330px;
+  top:65px;
+  font-size: 15px; */
+  color: #f03e3e;
+  /* margin-left: 120px; */
+}
+#logo{
+  font-family: 'Kanit', sans-serif;
+  position: absolute;
+  margin-left: 170px;
+  padding-bottom: 50px;
+}
+#map {
+  width: 100%;
+  height: 200px;
+  background-color: grey;
+}
+#tips{
+  font-family:'Kanit', sans-serif;
+  background-color: lightgrey;
+  border: 2px solid green;
+  padding: 25px;
+  margin: 2px;
+}
+#tips2{
+  font-family:'Kanit', sans-serif;
+
+  color:#f45353;
+}
+#times{
+  font-family:'Kanit', sans-serif;
+  text-align: center;
+}
+#num{
+  font-weight: bold;
+
+}
+.con{
+  text-align: center;
+}
+.profile{
+  border-radius: 50%;
+}
+.text{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #9ce2f7;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Main content */
+.main {
+  margin-top: 110px; /* Add a top margin to avoid content overlay */
+}
+div.absolute1{
+  position: absolute;
+  left: 40px;
+}
+div.absolute2{
+  position: absolute;
+  left: 105px;
+}
+div.absolute3{
+  position: absolute;
+  left: 170px;
+}
+div.absolute4{
+  position: absolute;
+  left: 285px;
+}
+div.absolute5{
+  position: absolute;
+  left: 350px;
+}
+div.absolute6{
+  position: absolute;
+  left: 415px;
+}
+div.absolute7{
+  position: absolute;
+  margin-top: 85px;
+  left: 40px;
+}
+div.absolute8{
+  position: absolute;
+  margin-top: 85px;
+  left: 105px;
+}
+div.absolute9{
+  position: absolute;
+  margin-top: 85px;
+  left: 170px;
+}
+div.absolute10{
+  position: absolute;
+  margin-top: 85px;
+  left: 285px;
+}
+div.absolute11{
+  position: absolute;
+  margin-top: 85px;
+  left: 350px;
+}
+div.absolute12{
+  position: absolute;
+  margin-top: 85px;
+  left: 415px;
+}
+div.absolute13{
+  position: absolute;
+  margin-top: 245px;
+  left: 40px;
+}
+div.absolute14{
+  position: absolute;
+  margin-top: 245px;
+  left: 105px;
+}
+div.absolute15{
+  position: absolute;
+  margin-top: 245px;
+  left: 170px;
+}
+div.absolute16{
+  position: absolute;
+  margin-top: 245px;
+  left: 285px;
+}
+div.absolute17{
+  position: absolute;
+  margin-top: 245px;
+  left: 350px;
+}
+div.absolute18{
+  position: absolute;
+  margin-top: 245px;
+  left: 415px;
+}
+div.absolute19{
+  position: absolute;
+  margin-top: 330px;
+  left: 40px;
+}
+div.absolute20{
+  position: absolute;
+  margin-top: 330px;
+  left: 105px;
+}
+div.absolute21{
+  position: absolute;
+  margin-top: 330px;
+  left: 170px;
+}
+div.absolute22{
+  position: absolute;
+  margin-top: 330px;
+  left: 285px;
+}
+div.absolute23{
+  position: absolute;
+  margin-top: 330px;
+  left: 350px;
+}
+div.absolute24{
+  position: absolute;
+  margin-top: 330px;
+  left: 415px;
+}
+div.pillar1{
+  position: absolute;
+  margin-top: 50px;
+  left: 238px;
+}
+div.pillar2{
+  position: absolute;
+  margin-top: 300px;
+  left: 238px;
+}
+div.catagory1{
+  position: absolute;
+  margin-top: 30px;
+  left: 5px;
+  color: #9ce2f7;
+}
+div.catagory2{
+  position: absolute;
+  margin-top: 100px;
+  left: 5px;
+  color: #9ce2f7;
+}
+div.catagory3{
+  position: absolute;
+  margin-top: 270px;
+  left: 5px;
+  color: #9ce2f7;
+}
+div.catagory4{
+  position: absolute;
+  margin-top: 350px;
+  left: 5px;
+  color: #9ce2f7;
+}

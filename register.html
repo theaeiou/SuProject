@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, inititial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>Login</title>
+  </head>
+  <body>
+    <style>
+    .fa-face {
+      background: #3B5998;
+      color: white;
+      }
+    .ga-google {
+      background: #c6545b;
+      color: white;
+      }
+    .line{
+      background-color:#6c757d;
+      height : 1px;
+      left: auto;
+      margin: auto;
+      width 100%;
+
+    }
+    .font{
+      font-family:'Kanit', sans-serif;
+    }
+    </style>
+      <!--- Header -->
+      <!-- <h3 id="header" style="font-family:'Kanit', sans-serif;" align="center">ยินดีต้อนรับ</h3><br> -->
+      <div id="profile" align="center"></div>
+      <div id="name" style="font-family:'Kanit', sans-serif; font-size:130%;" align="center"></div>
+      <!-- Login -->
+      <div id="login">
+        <div style="text-align:center;">
+          <img src="Logo2.png"style="width=auto;">
+          <h5 id="header2"class="font" align="center">โปรดเลือกวิธีการสมัครสมาชิก</h5>
+        </div>
+  <div class="row">
+    <div class="col-1">
+     </div>
+    <div class="col-10">
+      <!-- <div id="login"> -->
+      <button type="button" class="btn btn-lg btn-block btn-info fa fa-envelope-o" data-toggle="modal" data-target="#register">
+        <a style="font-family:'Kanit', sans-serif; font-size:110%;">สมัครด้วยเมลล์</a>
+      </button>
+        <button type="button" id="Flogin" class="btn btn-lg btn-block fa fa-face fab fa-facebook-square" name="button" onclick="FaceLog()">
+          <a style="font-family:'Kanit', sans-serif; font-size:110%;"> ล็อคอินผ่าน Facebook</a>
+        </button>
+              <!-- <button type="button" id="Phone" class="btn btn-lg btn-block" name="button2" data-toggle="modal" data-target="#exampleModal"> Phone login </button> -->
+        <button type="button" id="Glogin" class="btn btn-lg btn-block fa ga-google fab fa-google-plus-square" name="button" onclick="GooLog()">
+          <a style="font-family:'Kanit', sans-serif; font-size:110%;"> ล็อคอินผ่าน Google</a>
+        </button>
+      <!-- </div> -->
+    </div>
+    <div class="col-1">
+     </div>
+  </div>
+        </div>
+
+      <!-- Form -->
+      <span id="form" style="display:none"align="center">
+        <button type="button" id="Flogout" class="btn btn-link" style="color:red" name="logout" onclick="FLogOut()">Logout</button><br><br>
+        <h6 class="font">สมัครสมาชิกด้วยเลขทะเบียนรถ</h6>
+        <div class="input-group mb-3">
+        <input type="text" class="form-control" name="lp_car" id="lp" placeholder="เลขทะเบียนรถ">
+          <div class="input-group-append">
+            <button class="btn btn-info" type="button" name="save" onclick="check()">ตรวจสอบ</button>
+            <button class="btn btn-warning" type="button" name="save" id="Esend" onclick="saveOnClick()"disabled>สมัครสมาชิก</button>
+          </div>
+        </div>
+        <p id="noti" class="font"></p>
+      </span>
+
+      <!-- Modal -->
+    <div id="register" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title font">สมัครด้วยเมลล์</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="index2.html" method="post">
+              <input type="text" id="rmail" name="email" class="form-control fa font" placeholder="E-mail">
+              <input type="password" id="rpassword" name="pass" class="form-control fa font" placeholder="Password">
+              <input type="password" id="rcpassword" name="cpass" class="form-control fa font" placeholder="Confirm Password"><br>
+              <p class="font">ข้อมูลผู้ใช้</p>
+              <input type="text" id="Uname" name="uname" class="form-control fa font" style="width:60%" placeholder="ชื่อผู้ใช้">
+              <input type="text" id="lp_car" name="lp" class="form-control fa font" style="width:50%" placeholder="เลขทะเบียนรถ">
+              <a href="#" class="font" onclick="check2()">ตรวจสอบ</a>
+              <p id="noti2" class="font"></p>
+
+            </form><br>
+            <button type="submit" id="Esend2"class="btn fa btn-info font"data-dismiss="modal" onclick="register()" disabled>สมัครด้วยเมลล์</button>
+
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div> -->
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB8YPVLiwYmLieDQk4Vag-9yRaWrqnXIic",
+        authDomain: "project1-91182.firebaseapp.com",
+        databaseURL: "https://project1-91182.firebaseio.com",
+        projectId: "project1-91182",
+        storageBucket: "project1-91182.appspot.com",
+        messagingSenderId: "411349173119"
+      };
+      firebase.initializeApp(config);
+
+    </script>
+    <script type="text/javascript" src="regis.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
